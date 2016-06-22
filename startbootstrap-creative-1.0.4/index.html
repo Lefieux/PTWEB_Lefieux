@@ -18,6 +18,7 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="css/responsiveslides.css">
 
     <!-- Plugin CSS -->
     <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
@@ -26,38 +27,6 @@
     <link rel="stylesheet" href="css/creative.css" type="text/css">
     
     <!-- Javascript -->
-    <script type="text/javascript" src="js/supersized.3.2.7.min.js"></script>
-    <script type="text/javascript" src="theme/supersized.shutter.min.js"></script>
-    
-    <script type="text/javascript">
-			
-			jQuery(function($){
-				
-				$.supersized({
-				
-					// Functionality
-					slide_interval          :   5000,		// Length between transitions
-					transition              :   1, 			// 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
-					transition_speed		:	2000,		// Speed of transition
-															   
-					// Components							
-					slide_links				:	'blank',	// Individual links for each slide (Options: false, 'num', 'name', 'blank')
-					slides 					:  	[			// Slideshow Images
-														{image : '../../Images/', title : 'Image Credit: Maria Kazvan', thumb : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/thumbs/kazvan-1.jpg', url : 'http://www.nonsensesociety.com/2011/04/maria-kazvan/'},
-														{image : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/slides/kazvan-2.jpg', title : 'Image Credit: Maria Kazvan', thumb : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/thumbs/kazvan-2.jpg', url : 'http://www.nonsensesociety.com/2011/04/maria-kazvan/'},  
-														{image : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/slides/kazvan-3.jpg', title : 'Image Credit: Maria Kazvan', thumb : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/thumbs/kazvan-3.jpg', url : 'http://www.nonsensesociety.com/2011/04/maria-kazvan/'},
-														{image : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/slides/wojno-1.jpg', title : 'Image Credit: Colin Wojno', thumb : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/thumbs/wojno-1.jpg', url : 'http://www.nonsensesociety.com/2011/03/colin/'},
-														{image : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/slides/wojno-2.jpg', title : 'Image Credit: Colin Wojno', thumb : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/thumbs/wojno-2.jpg', url : 'http://www.nonsensesociety.com/2011/03/colin/'},
-														{image : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/slides/wojno-3.jpg', title : 'Image Credit: Colin Wojno', thumb : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/thumbs/wojno-3.jpg', url : 'http://www.nonsensesociety.com/2011/03/colin/'},
-														{image : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/slides/shaden-1.jpg', title : 'Image Credit: Brooke Shaden', thumb : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/thumbs/shaden-1.jpg', url : 'http://www.nonsensesociety.com/2011/06/brooke-shaden/'},
-														{image : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/slides/shaden-2.jpg', title : 'Image Credit: Brooke Shaden', thumb : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/thumbs/shaden-2.jpg', url : 'http://www.nonsensesociety.com/2011/06/brooke-shaden/'},
-														{image : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/slides/shaden-3.jpg', title : 'Image Credit: Brooke Shaden', thumb : 'http://buildinternet.s3.amazonaws.com/projects/supersized/3.2/thumbs/shaden-3.jpg', url : 'http://www.nonsensesociety.com/2011/06/brooke-shaden/'}
-												]
-					
-				});
-		    });
-		    
-		</script>
     
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -94,7 +63,8 @@
                     <li>
                         <a class="page-scroll" href="#services">Mon Parcours</a>
                     </li>
-                        <a class="page-scroll" href="#services">Mes Compétences</a>
+                    <li>
+                        <a class="page-scroll" href="#competences">Mes Compétences</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#portfolio">Mes Réalisations</a>
@@ -110,18 +80,24 @@
     </nav>
 
     <header>
-        <ul class="rslides">
-          <li><img src="../startbootstrap-creative-1.0.4/img/header.jpg" alt=""></li>
-          <li><img src="../startbootstrap-creative-1.0.4/img/header1_1.jpg" alt=""></li>
-          <li><img src="../startbootstrap-creative-1.0.4/img/header2_2.jpg" alt=""></li>
-        </ul>
-        
+        <div class="slider" id="main-slider"><!-- outermost container element -->
+            <div class="slider-wrapper"><!-- innermost wrapper element -->
+                <img src="img/header.jpg" alt="First" class="slide" /><!-- slides -->
+                <img src="img/header1_1.jpg" alt="Second" class="slide" />
+                <img src="img/header2_2.jpg" alt="Third" class="slide" />
+            </div>
+        </div> 
         <div class="header-content">
             <div class="header-content-inner">
-                <img src="../../Images/Logo%20cv.png" height="300vh" width="30%">
-                <h1>Ludovic Lefieux</h1>
-                <p>Cadreur / Monteur</p>
-                <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
+                <div style="text-align:center">
+                      <span class="dot"></span>
+                      <span class="dot"></span>
+                      <span class="dot"></span>
+                </div>
+                <img src="img/Logo%20cv%20blanc.png" height="300px" width="300px">
+                </br></br><h1>Ludovic Lefieux</h1>
+                </br><p>Cadreur / Monteur</p>
+                </br><a href="#about" class="btn btn-primary btn-xl page-scroll"><i class="fa fa-chevron-circle-down chevron" aria-hidden="true"></i></a>
             </div>
         </div>
     </header>
@@ -131,8 +107,9 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <h2 class="section-heading">Qui suis-je ?</h2>
-                    <hr class="light">
-                    <p class="text-faded">Bonjour et bienvenue sur mon CV interactif. </br>
+                    <hr class="light"></br>
+                    <img src="img/Photo_id.png" height="300px" width="300px"></img>
+                    <p class="text-faded"></br>Bonjour et bienvenue sur mon CV interactif. </br>
 Je m’appelle Ludovic Lefieux, j’ai 19 ans et je suis actuellement
 étudiant en 1ère année de DUT Métiers du Multimédia et de
 l’Internet à l’IUT d’Haguenau près de Strasbourg.
@@ -141,6 +118,26 @@ aspects des métiers du web comme l’intégration, l’infographie
 ou la communication. Cependant, je m’intéresse
 particulièrement au secteur de l’audiovisuel et aimerait
 travailler dans ce domaine à la fin de mon projet d’étude.</p>
+                </br>
+            
+                <h2>Je m'intéresse...</h2>
+                </br>
+                </div>
+        
+                
+                <div class="cinema">
+                    <h4>Aux techniques audiovisuelles ainsi qu’au cinéma</h4>
+                    <p class="hobbie-videos">Depuis quelque années maintenant, le cinéma est un monde qui m’attire et me fascine. À tel point que je veux travailler en tant que monteur à l’avenir. Ces derniers temps j’essaie d’agrandir en regardant beaucoup de films et de séries. J’adore aussi regarder des making offs de films que j’ai apprécié. </p>
+                </div>
+            
+                <div class="guitare">
+                    <h4>À la guitare électrique</h4>
+                    <p class="hobbie-guitare">Cela fait quelques mois maintenant que je me suis acheté une guitare électrique et que j’apprends à en faire en autodidacte pendant mon temps libre.  Je ne suis encore que débutant mais les progrès avancent !</p>
+                </div>
+            
+                <div class="jv">
+                    <h4>Aux jeux vidéos</h4>
+                    <p class="hobbie-jv">J’ai toujours été passionné de jeux vidéos depuis mon enfance. Je réalise quelques courts-métrages sur des jeux vidéos afin de me familiariser avec le métier en attendant d’avoir du matériel de qualité pour en réaliser en vrai. Je trouve que c’est un support intéressant pour cela, malheureusement trop sous-estimé pour l’instant.</p>
                 </div>
             </div>
         </div>
@@ -157,32 +154,49 @@ travailler dans ce domaine à la fin de mon projet d’étude.</p>
         </div>
         <div class="container">
             <div class="row">
+                <div class="timeline"></div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
-                        <i class="fa fa-4x fa-diamond text-primary sr-icons"></i>
-                        <h3>Sturdy Templates</h3>
-                        <p class="text-muted">Our templates are updated regularly so they don't break.</p>
+                        <div class="cercle">
+                            <p class="ordre">1</p>
+                        </div>
+                        <h3>2013 - 2015</h3></br>
+                        <h3>Bac STI2D option SIN</h3>
+                        <p class="text-muted">Au lycée Alphonse HEINRICH à Haguenau. Cette filière forme aux métiers de l’industrie et de l’informatique en mettant l’accent sur le développement durable.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="service-box">
-                        <i class="fa fa-4x fa-paper-plane text-primary sr-icons"></i>
-                        <h3>Ready to Ship</h3>
-                        <p class="text-muted">You can use this theme as is, or you can make changes!</p>
+                        <div class="cercle2">
+                            <p class="ordre">2</p>
+                        </div>
+                        <h3>Depuis 2015</h3></br>
+                        <h3>DUT MMI</h3>
+                        <p class="text-muted">À l’IUT d’Haguenau. Cette formation prépare aux métiers du web et du multimédia en abordant différents aspects comme l’intégration web, l’infographie, la communication et l’audiovisuel.</p>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-newspaper-o text-primary sr-icons"></i>
-                        <h3>Up to Date</h3>
-                        <p class="text-muted">We update dependencies to keep things fresh.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="competences">
+        <div class="background-comp">
+            <div class="container">    
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2 class="heading-competences">Mes Compétences</h2>
+                        <hr class="primary">
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-heart text-primary sr-icons"></i>
-                        <h3>Made with Love</h3>
-                        <p class="text-muted">You have to make your websites with love these days!</p>
+            </div>
+        </div>
+        <div class="comp-contenu">
+            <div class="container">
+                <div class="row">
+                    <div class="cadrage">
+                        <h2>Cadrage</h2></br>
+                        <img src="img/lens-1280309_1920.png" height="75px" width="75px">
+                        
                     </div>
                 </div>
             </div>
@@ -333,13 +347,10 @@ travailler dans ce domaine à la fin de mon projet d’étude.</p>
 
     <!-- Slider -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script src="slide.js"></script>
-    <script>
-      $(function() {
-        $(".rslides").responsiveSlides();
-      });
-    </script>
+    <script src="js/jquery-2.2.3.min.js"></script>
+    <script src="js/main.js"></script>
     
-</body>
+    <!-- Barres de progression -->
 
+</body>
 </html>

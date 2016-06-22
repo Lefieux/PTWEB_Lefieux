@@ -10,7 +10,7 @@ body {
   width: 100%;
 }
 body {
-  font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
 }
 hr {
   border-color: #629fc5;
@@ -38,23 +38,29 @@ h5,
 h6 {
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
 }
+h4 {
+    text-decoration: underline;
+}
 p {
   font-size: 16px;
   line-height: 1.5;
   margin-bottom: 20px;
+  text-align: justify;
 }
 .bg-primary {
   background-color: #114e7d;
 }
 .bg-dark {
-  background-color: #222222;
+  background-color: #629fc5;
   color: white;
 }
 .text-faded {
   color: rgba(255, 255, 255, 0.7);
+  text-align: justify;
 }
 section {
   padding: 100px 0;
+  background-color: white;
 }
 aside {
   padding: 50px 0;
@@ -150,43 +156,9 @@ header {
   background-size: cover;
   -o-background-size: cover;
   background-position: center;
-  background-image: url('../img/header.jpg');
   background-attachment: fixed;
-  text-align: center;
   color: white;
 }
-
-.rslides {
-  position: absolute;
-  list-style: none;
-  overflow: hidden;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  }
-
-.rslides li {
-  -webkit-backface-visibility: hidden;
-  position: absolute;
-  display: none;
-  width: 100%;
-  left: 0;
-  top: 0;
-  }
-
-.rslides li:first-child {
-  position: relative;
-  display: block;
-  float: left;
-  }
-
-.rslides img {
-  display: block;
-  height: auto;
-  float: left;
-  width: 100%;
-  border: 0;
-  }
 
 header .header-content {
   position: relative;
@@ -232,15 +204,114 @@ header .header-content .header-content-inner p {
     max-width: 80%;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
+    margin-top : 30px;
   }
 }
+
+.slider {
+ width: 100%;
+ margin: auto;
+ position: fixed;   
+ top : 0;
+ left : 0;
+ z-index: -10;
+}
+
+.slider-wrapper {
+ width: 100%;
+ height: 100vh;
+ position: absolute;
+ top : 0;
+ left: 0;
+ float : left;
+}
+
+.slide {
+ float: left;
+ position: absolute;
+ width: 100%;
+ height: 100vh;
+ opacity: 0;
+ transition: opacity 1.5s linear;
+}
+
+.slider-wrapper > .slide:first-child {
+ opacity: 1;
+}
+
 .section-heading {
   margin-top: 0;
 }
 .service-box {
-  max-width: 400px;
+  max-width: 300px;
   margin: 50px auto 0;
 }
+
+.cinema {
+    float : left;
+    width: 300px;
+}
+
+.hobbie-videos {
+    text-align : justify;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.guitare {
+    float : left;
+    width: 300px;
+    margin-left: 12%;
+}
+
+.hobbie-guitare {
+    text-align : justify;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 29px;
+}
+
+.jv {
+    float : right;
+    width: 300px;
+}
+
+.hobbie-jv {
+    text-align : justify;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 29px;
+}
+
+.timeline {
+    position:absolute;
+    height: 1px;
+    width: 90%;
+    border: solid 2px black;
+    margin-top: 5em;
+}
+
+.cercle {
+    border-radius: 50%;
+    background-color: #629fc5;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.cercle2 {
+    border-radius: 50%;
+    background-color: #114e7d;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+}
+
+.ordre {
+    font-size: 30pt;
+    color: white;
+    text-align: center;
+    line-height: 100px;
+}
+
 @media (min-width: 992px) {
   .service-box {
     margin: 20px auto 0;
@@ -249,6 +320,33 @@ header .header-content .header-content-inner p {
 .service-box p {
   margin-bottom: 0;
 }
+
+#competences {
+   padding: 0;
+}
+
+.background-comp {
+    padding-top: 100px;
+    background-image: url('../img/header2_2.jpg');
+    background-attachment: fixed;
+    display: block;
+    z-index: 1;
+    width : 100%;
+    height: 250px;
+    margin-top: 0;
+}
+
+.heading-competences {
+    margin-top: 0;
+    color: white;
+}
+
+.comp-contenu {
+    background-color: #3C3C3C;
+    color: white;
+    padding: 50px 50px 50px 0;
+}
+
 .portfolio-box {
   position: relative;
   display: block;
@@ -361,10 +459,13 @@ fieldset[disabled] .btn-default.active {
   color: #ffffff;
   background-color: #222222;
 }
+
+.chevron {
+    font-size: 70pt;
+}
+
 .btn-primary {
   color: #ffffff;
-  background-color: #f05f40;
-  border-color: #f05f40;
   -webkit-transition: all 0.35s;
   -moz-transition: all 0.35s;
   transition: all 0.35s;
@@ -406,18 +507,15 @@ fieldset[disabled] .btn-primary.active {
   border-color: #f05f40;
 }
 .btn-primary .badge {
-  color: #f05f40;
   background-color: #ffffff;
 }
 .btn {
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
   border: none;
-  border-radius: 300px;
-  font-weight: 700;
   text-transform: uppercase;
 }
 .btn-xl {
-  padding: 15px 30px;
+
 }
 ::-moz-selection {
   color: white;
