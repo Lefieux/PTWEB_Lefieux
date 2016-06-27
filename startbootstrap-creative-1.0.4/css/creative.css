@@ -12,6 +12,9 @@ body {
 body {
   font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
 }
+
+/*-- Base --*/
+
 hr {
   border-color: #629fc5;
   border-width: 3px;
@@ -25,10 +28,6 @@ a {
   -moz-transition: all 0.35s;
   transition: all 0.35s;
   color: #53a12c;
-}
-a:hover,
-a:focus {
-  color: #eb3812;
 }
 h1,
 h2,
@@ -47,17 +46,36 @@ p {
   margin-bottom: 20px;
   text-align: justify;
 }
+
+.p-contact {
+    text-align: center;
+}
+
+span {
+    color: #00C700;
+}
+
+h4 {
+    text-align: center;
+}
+
 .bg-primary {
   background-color: #114e7d;
 }
 .bg-dark {
   background-color: #629fc5;
   color: white;
+  padding-bottom: 0;
 }
 .text-faded {
   color: rgba(255, 255, 255, 0.7);
   text-align: justify;
 }
+
+.text-faded-portfolio {
+  color: rgba(255, 255, 255, 0.7);
+}
+
 section {
   padding: 100px 0;
   background-color: white;
@@ -68,6 +86,12 @@ aside {
 .no-padding {
   padding: 0;
 }
+
+
+
+
+/*-- Menu --*/
+
 .navbar-default {
   background-color: white;
   border-color: rgba(34, 34, 34, 0.05);
@@ -147,6 +171,12 @@ aside {
     color: #629fc5;
   }
 }
+
+
+
+
+/*-- Header --*/
+
 header {
   position: relative;
   width: 100%;
@@ -209,6 +239,11 @@ header .header-content .header-content-inner p {
   }
 }
 
+
+
+
+/*-- Slider --*/
+
 .slider {
  width: 100%;
  margin: auto;
@@ -240,6 +275,11 @@ header .header-content .header-content-inner p {
  opacity: 1;
 }
 
+
+
+
+/*-- Qui suis-je ? --*/
+
 .section-heading {
   margin-top: 0;
 }
@@ -250,7 +290,15 @@ header .header-content .header-content-inner p {
 
 .cinema {
     float : left;
-    width: 300px;
+    width: 25%;
+    position:relative;
+    min-height:1px;
+    padding-right:15px;
+    padding-left:15px;
+}
+
+.cinema img {
+    margin: 0 auto;
 }
 
 .hobbie-videos {
@@ -260,8 +308,12 @@ header .header-content .header-content-inner p {
 
 .guitare {
     float : left;
-    width: 300px;
-    margin-left: 12%;
+    width: 25%;
+    position:relative;
+    min-height:1px;
+    padding-right:15px;
+    padding-left:15px;
+    margin-left: 10%;
 }
 
 .hobbie-guitare {
@@ -271,8 +323,13 @@ header .header-content .header-content-inner p {
 }
 
 .jv {
-    float : right;
-    width: 300px;
+    float : left;
+    width: 25%;
+    position:relative;
+    min-height:1px;
+    padding-right:15px;
+    padding-left:15px;
+    margin-left: 10%;
 }
 
 .hobbie-jv {
@@ -280,6 +337,11 @@ header .header-content .header-content-inner p {
     color: rgba(255, 255, 255, 0.7);
     margin-top: 29px;
 }
+
+
+
+
+/*-- Parcours --*/
 
 .timeline {
     position:absolute;
@@ -321,13 +383,25 @@ header .header-content .header-content-inner p {
   margin-bottom: 0;
 }
 
+@media (max-width:992px) {
+    .timeline {
+        visibility: hidden;
+    }
+}
+
+
+
+
+
+/*-- Compétences --*/
+
 #competences {
    padding: 0;
 }
 
 .background-comp {
     padding-top: 100px;
-    background-image: url('../img/header2_2.jpg');
+    background-image: url('../img/comp.jpg');
     background-attachment: fixed;
     display: block;
     z-index: 1;
@@ -344,7 +418,150 @@ header .header-content .header-content-inner p {
 .comp-contenu {
     background-color: #3C3C3C;
     color: white;
-    padding: 50px 50px 50px 0;
+    padding: 50px 50px 50px 50px;;
+}
+
+.skillbar {
+    color: white;
+	position:relative;
+	display:block;
+	margin-bottom:15px;
+	width:100%;
+	height:35px;
+    border: solid 1px white;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	-webkit-transition:0.4s linear;
+	-moz-transition:0.4s linear;
+	-ms-transition:0.4s linear;
+	-o-transition:0.4s linear;
+	transition:0.4s linear;
+	-webkit-transition-property:width, background-color;
+	-moz-transition-property:width, background-color;
+	-ms-transition-property:width, background-color;
+	-o-transition-property:width, background-color;
+	transition-property:width, background-color;
+}
+
+.skillbar-title {
+	position:absolute;
+	top:0;
+	left:0;
+    width:150px;
+	font-weight:bold;
+	font-size:13px;
+	color:#ffffff;
+	background:#6adcfa;
+	-webkit-border-top-left-radius:3px;
+	-webkit-border-bottom-left-radius:4px;
+	-moz-border-radius-topleft:3px;
+	-moz-border-radius-bottomleft:3px;
+	border-top-left-radius:3px;
+	border-bottom-left-radius:3px;
+}
+
+.skillbar-title span {
+	display:block;
+	background:rgba(0, 0, 0, 0.1);
+	padding:0 20px;
+	height:35px;
+    color: white;
+	line-height:35px;
+	-webkit-border-top-left-radius:3px;
+	-webkit-border-bottom-left-radius:3px;
+	-moz-border-radius-topleft:3px;
+	-moz-border-radius-bottomleft:3px;
+	border-top-left-radius:3px;
+	border-bottom-left-radius:3px;
+}
+
+.skillbar-bar {
+	height:35px;
+	width:0px;
+	background:#6adcfa;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+}
+
+.skill-bar-percent {
+	position:absolute;
+	right:10px;
+	top:0;
+	font-size:11px;
+	height:35px;
+	line-height:35px;
+	color: white;
+}
+
+.comp_supp {
+    text-align: center;
+}
+
+.comp_supp img{
+    margin-right: 50px;
+}
+
+
+
+
+/*-- Portfolio --*/
+
+    /*-- Menu portfolio --*/
+
+#sse2
+{
+    /*You can decorate the menu's container, such as adding background images through this block*/
+    height: 38px;
+    padding: 15px;
+    border-radius: 6px;
+    box-sizing: content-box;
+    text-align: center;
+}
+#sses2
+{
+    margin:0 auto;/*This will make the menu center-aligned. Removing this line will make the menu align left.*/
+}
+#sses2 ul 
+{ 
+    position: relative;
+    list-style-type: none;
+    float:left;
+    padding:0;margin:0 auto;
+}
+#sses2 li
+{
+    float:left;
+    list-style-type: none;
+    padding:0;margin:0;background-image:none;
+}
+/*CSS for background bubble*/
+#sses2 li.highlight
+{
+    border:solid 1px #297304;
+    background-color:#297304;
+    top:0px;
+    height:30px;
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    z-index: 1;
+    position: absolute;
+    overflow:hidden;
+}
+#sses2 li a
+{
+    height:30px;
+    padding-top: 8px;
+    margin: 0 20px;/*used to adjust the distance between each menu item. Now the distance is 20+20=40px.*/
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    float: left;
+    display: block;
+    position: relative;
+    z-index: 2;
 }
 
 .portfolio-box {
@@ -353,11 +570,52 @@ header .header-content .header-content-inner p {
   max-width: 650px;
   margin: 0 auto;
 }
+
+.button {
+    width: 22%;
+    height: 40px;
+    display: inline-block;
+    padding: 10px 18px;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    background: #171717;
+    border-top: solid 1px white;
+    border-bottom: solid 1px white;
+    border-left: none;
+    border-right: none;
+    color: white;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.button:hover {
+    background-color: white;
+    color: #171717;
+}
+
+.button:active, .button.is-checked {
+    background-color: white;
+}
+
+.button.is-checked {
+    color: #171717;
+}
+
+    /* ---- button-group ---- */
+
+.button-group .button {
+    float: left;
+    margin-left: 0;
+}
+
+.button-group .button:first-child { border-left: solid 1px white; }
+.button-group .button:last-child { border-right: solid 1px white; }
+
 .portfolio-box .portfolio-box-caption {
   color: white;
   opacity: 0;
   display: block;
-  background: rgba(240, 95, 64, 0.9);
+  background: rgba(83, 161, 44, 0.9);
   position: absolute;
   bottom: 0;
   text-align: center;
@@ -477,14 +735,15 @@ fieldset[disabled] .btn-default.active {
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
   color: #ffffff;
-  background-color: #ee4b28;
-  border-color: #ed431f;
+  background-color: none;
+  border-color: none;
 }
 .btn-primary:active,
 .btn-primary.active,
 .open > .dropdown-toggle.btn-primary {
   background-image: none;
 }
+
 .btn-primary.disabled,
 .btn-primary[disabled],
 fieldset[disabled] .btn-primary,
@@ -535,6 +794,100 @@ img::-moz-selection {
   color: white;
   background: transparent;
 }
+
+
+
+
+/*-- Contact --*/
+
+#contact {
+    background-color: #114e7d;
+    color: white;
+}
+
+.infos {
+    text-align: center;
+}
+
+.sous-titre {
+    text-align: center;
+}
+
+.sr-contact {
+    font-size: 15pt;
+    margin-right: 10px;
+}
+
+.button-cv {
+    text-align: center;
+    background-color: #53a12c;
+    padding: 10px;
+    width: 200px;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.button-cv p {
+    text-align: center;
+    color: white;
+    text-decoration: none;
+}
+
+form {
+    color: gray;
+}
+
+.text1 {
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+}
+
+.text2 {
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+}
+
+textarea {
+    width: 100%;
+    height: 300px;
+}
+
+.clearfix:after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+
+
+
+
+/*-- Footer --*/
+
+footer {
+    background-color: #F3F3F3;
+    color: black;
+    padding : 20px;
+}
+
+.footer-left {
+    margin : 30px 0 10px 40px;
+    float: left;
+}
+
+.footer-right {
+    float: right;
+    margin : 30px 40px 10px 0;
+}
+
+@media (max-width: 768px) {
+    .footer {
+        font-size: 8pt;
+    }
+}
+
 body {
   webkit-tap-highlight-color: #222222;
 }

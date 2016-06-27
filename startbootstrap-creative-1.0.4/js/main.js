@@ -39,7 +39,7 @@
     }
     self._slideTo( self.index );
     
-   }, 5000);
+   }, 3000);
   },
   stopStart: function() {
    var self = this;
@@ -69,13 +69,3 @@ $(window).scroll(function() {
         });
 
 
-/*defilement fluide*/
-
-$('a[href^="#"]').click(function(){
- var the_id = $(this).attr("href");
-
- $('html, body').animate({
-  scrollTop:$(the_id).offset().top
- }, 'slow');
- return false;
-});
